@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f8e4329cba81bb454941b65bcd01d878",
+    "hash": "c8489066ef363c7c2eeabb9e0f3b27b4",
     "packages": [
         {
             "name": "shopex/prism",
@@ -56,6 +56,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.0.0"
+    },
     "platform-dev": []
 }

@@ -1,4 +1,4 @@
-g
+{
     "name": "shopex/prism-lib",
     "description": "SDK for shopex prism platform",
     "keywords": ["shopex", "prism", "api"],
@@ -11,5 +11,5 @@ g
     },
     "autoload": {
         "psr-0": { "Shopex\\PrismLib\\Lib": "src/lib/" }
-    },
+    }
 }
