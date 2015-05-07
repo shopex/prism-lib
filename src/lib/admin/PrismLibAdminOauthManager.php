@@ -16,10 +16,7 @@ class PrismLibAdminOauthManager extends PrismLibBase
      */
     public function get($params)
     {
-        PrismLibCheckUtil::checkNotNull( $params['email'], 'email' );
-        PrismLibCheckUtil::checkNotNull( $params['password'], 'password' );
-
-        return $this->callPrismApi( '/api/platform/manageuser/create', $params, 'post' );
+        return $this->callPrismApi( '/api/platform/manageoauth/config/get', $params, 'post' );
     }
 
     public function set($params)

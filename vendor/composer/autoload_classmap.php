@@ -9,6 +9,7 @@ return array(
     'Notify' => $vendorDir . '/shopex/prism/src/Notify.php',
     'Oauth' => $vendorDir . '/shopex/prism/src/Oauth.php',
     'PrismClient' => $vendorDir . '/shopex/prism/src/PrismClient.php',
+    'PrismLibAdminOauthManager' => $baseDir . '/src/lib/admin/PrismLibAdminOauthManager.php',
     'PrismLibAdminUserManager' => $baseDir . '/src/lib/admin/PrismLibAdminUserManager.php',
     'PrismLibBase' => $baseDir . '/src/lib/PrismLibBase.php',
     'PrismLibCheckUtil' => $baseDir . '/src/lib/PrismLibCheckUtil.php',
