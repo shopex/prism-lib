@@ -1,5 +1,15 @@
-{
+g
+    "name": "shopex/prism-lib",
+    "description": "SDK for shopex prism platform",
+    "keywords": ["shopex", "prism", "api"],
+    "homepage": "http://github.com/shopex/prism-php",
+    "type": "library",
+    "license": "MIT",
     "require": {
+        "php": ">=5.0.0",
         "shopex/prism": "v1.0"
-    }
+    },
+    "autoload": {
+        "psr-0": { "Shopex\\PrismLib\\Lib": "src/lib/" }
+    },
 }

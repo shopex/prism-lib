@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__ . '/../../vendor/autoload.php');
-require_once(__DIR__ . '/PrismLibCheckUtil.php');
+use Shopex\PrismLib\Lib\PrismLibCheckUtil;
 
 class PrismLibBase extends PrismCilent
 {
