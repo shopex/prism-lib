@@ -1,0 +1,47 @@
+[
+    {
+        "name": "shopex/prism",
+        "version": "v1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/shopex/prism-php.git",
+            "reference": "e9cafbd6ef35eb6f86277303c3a8d1345bc7542d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/shopex/prism-php/zipball/e9cafbd6ef35eb6f86277303c3a8d1345bc7542d",
+            "reference": "e9cafbd6ef35eb6f86277303c3a8d1345bc7542d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "time": "2015-04-24 06:21:50",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Cai Yun Chen",
+                "email": "caiyunchen@shopex.cn",
+                "homepage": "http://www.shopex.cn/"
+            }
+        ],
+        "description": "SDK for shopex prism platform",
+        "homepage": "http://github.com/shopex/prism-php",
+        "keywords": [
+            "api",
+            "prism",
+            "shopex"
+        ]
+    }
+]
