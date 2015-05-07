@@ -5,6 +5,13 @@
     "homepage": "http://github.com/shopex/prism-php",
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Guo Cheng",
+            "email": "guocheng@shopex.cn",
+            "homepage": "http://www.shopex.cn/"
+        }
+    ],
     "require": {
         "php": ">=5.0.0",
         "shopex/prism": "v1.0"
