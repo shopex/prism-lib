@@ -10,6 +10,6 @@
         "shopex/prism": "v1.0"
     },
     "autoload": {
-        "psr-0": { "Shopex\\PrismLib\\Lib": "src/lib/" }
+        "classmap": [ "src/lib/" ]
     }
 }

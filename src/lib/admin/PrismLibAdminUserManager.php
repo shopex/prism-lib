@@ -1,7 +1,5 @@
 <?php
-require_once(__DIR__ . '../base.php');
-
-class AdminUserManager extends PrismCilent
+class PrismLibAdminUserManager extends PrismLibBase
 {
     /**
      * prism通过admin用户权限创建用户
@@ -16,13 +14,10 @@ class AdminUserManager extends PrismCilent
      */
     public function create($params)
     {
-        $result = $this->post( '/api/platform/manageuser/create', $params );
-        $return = json_decode( $result, true );
-        if( $return['error'] != null )
-        {
-            throw new ErrorException( $return['error']['message'], $return['error']['code'] );
-        }
-        return $return['result'];
+        PrismLibCheckUtil::checkNotNull( $params['email'], 'email' );
+        PrismLibCheckUtil::checkNotNull( $params['password'], 'password' );
+
+        return $this->callPrismApi( '/api/platform/manageuser/create', $params, 'post' );
     }
 }
 
