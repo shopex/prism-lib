@@ -5,23 +5,44 @@ class PrismLibAdminOauthManager extends PrismLibBase
     /**
      * 获取Oauth配置
      *
+     * @params bool is_sandbox 是否取沙箱环境设置
+     * @params string config
      *
-     * @params string email 新用户的邮箱，用户名将取邮箱@符前的内容，用于登陆prism前台
-     * @params string password 新用户的密码，用于登陆prism前台
-     * @params string summary 新用户的备注信息
-     *
-     * @return domainid 用户的域
-     * @return email 用户的email
-     * @return id prism生成的用户id
+     * @return string CfgIdColumn 用户验证表的id项
+     * @return string CheckAccountSQL 用来查看用户名密码是否正确的sql
+     * @return string Database mysql的数据库
+     * @return string FailedSQL 验证失败后带的sql查询结果
+     * @return string Host mysql的host
+     * @return string Password mysql的密码
+     * @return string SuccessSQL 验证成功后oauth信息带有的sql查询结果
+     * @return string User mysql的用户名
      */
     public function get($params)
     {
         return $this->callPrismApi( '/api/platform/manageoauth/config/get', $params, 'post' );
     }
 
+
+    /**
+     * 获取Oauth配置
+     *
+     * @params bool is_sandbox 是否取沙箱环境设置
+     * @params string config 下列数据的json
+     *
+     * @json string CfgIdColumn 用户验证表的id项
+     * @json string CheckAccountSQL 用来查看用户名密码是否正确的sql
+     * @json string Database mysql的数据库
+     * @json string FailedSQL 验证失败后带的sql查询结果
+     * @json string Host mysql的host
+     * @json string Password mysql的密码
+     * @json string SuccessSQL 验证成功后oauth信息带有的sql查询结果
+     * @json string User mysql的用户名
+     *
+     * @return bool true
+     */
     public function set($params)
     {
-
+        return $this->callPrismApi( '/api/platform/manageoauth/config/set', $params, 'post' );
     }
 }
 
