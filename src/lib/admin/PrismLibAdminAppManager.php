@@ -15,9 +15,9 @@ class PrismLibAdminAppManager extends PrismLibBase
      */
     public function bind($params)
     {
-        prismlibcheckutil::checknotnull( $params['app_id'], 'app_id' );
-        prismlibcheckutil::checknotnull( $params['api_id'], 'api_id' );
-        prismlibcheckutil::checknotnull( $params['path'], 'path' );
+        PrismLibCheckUtil::checknotnull( $params['app_id'], 'app_id' );
+        PrismLibCheckUtil::checknotnull( $params['api_id'], 'api_id' );
+        PrismLibCheckUtil::checknotnull( $params['path'], 'path' );
 
         return $this->callPrismApi( '/api/platform/manageapp/bind', $params, 'post' );
     }
