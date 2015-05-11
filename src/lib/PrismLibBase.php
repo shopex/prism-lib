@@ -16,7 +16,7 @@ class PrismLibBase
         $result = json_decode($result, true);
         if( $result['error'] != null )
         {
-            throw new ErrorException( $return['error']['message'], $return['error']['code'] );
+            throw new ErrorException( $result['error']['message'], $result['error']['code'] );
         }
         return $result['result'];
     }

@@ -24,7 +24,7 @@ class PrismLibDeveloperKeyManager extends PrismLibBase
      *
      * @param string key 要删除的key
      *
-     * @return bool true
+     * @return string deleted
      */
     public function delete($params)
     {

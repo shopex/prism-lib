@@ -47,7 +47,7 @@ class PrismLibAdminAppManager extends PrismLibBase
      * @return name app的name
      * @return summary app的备
      */
-    public function getList($params)
+    public function getList($params = null)
     {
         return $this->callPrismApi( '/api/platform/manageapp/list', null, 'get' );
     }

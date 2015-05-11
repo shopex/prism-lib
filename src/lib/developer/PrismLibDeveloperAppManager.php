@@ -78,7 +78,7 @@ class PrismLibDeveloperAppManager extends PrismLibBase
     {
         PrismLibCheckUtil::checkNotNull( $params['app_id'], 'app_id' );
 
-        return $this->callPrismApi( '/api/platform/app/info/' . $params['app_id'], $params, 'post' );
+        return $this->callPrismApi( '/api/platform/app/info/' . $params['app_id'], $params, 'get' );
     }
 
     /**
@@ -86,7 +86,7 @@ class PrismLibDeveloperAppManager extends PrismLibBase
      * 无请求参数
      *
      */
-    public function getList($params)
+    public function getList($params = null)
     {
         return $this->callPrismApi( '/api/platform/app/list', $params, 'post' );
     }
