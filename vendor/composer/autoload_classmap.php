@@ -18,6 +18,7 @@ return array(
     'PrismLibDeveloperApiManager' => $baseDir . '/src/lib/developer/PrismLibDeveloperApiManager.php',
     'PrismLibDeveloperAppManager' => $baseDir . '/src/lib/developer/PrismLibDeveloperAppManager.php',
     'PrismLibDeveloperKeyManager' => $baseDir . '/src/lib/developer/PrismLibDeveloperKeyManager.php',
+    'PrismLibInitTool' => $baseDir . '/src/lib/PrismLibInitTool.php',
     'PrismServer' => $vendorDir . '/shopex/prism/src/PrismServer.php',
     'PrismServerInterface' => $vendorDir . '/shopex/prism/src/PrismServer.php',
     'Requester' => $vendorDir . '/shopex/prism/src/Requester.php',

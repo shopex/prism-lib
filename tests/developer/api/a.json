@@ -1,0 +1,81 @@
+{
+    "url": "http://192.168.51.221/ecstore/index.php/api",
+        "interface": "",
+        "sandbox_url": "",
+        "resource_content_types": null,
+        "prefix": "ecstore",
+        "summary": "ecstore",
+        "apis": {
+            "b2c_member_signup": {
+                "path": "",
+                "method": [
+                    "GET",
+                "POST"
+                    ],
+                "summary": "用户注册",
+                "notes": "",
+                "require_oauth": false,
+                "backend_timeout_second": 0,
+                "params": [
+                {
+                    "name": "uname",
+                    "desc": "用户名",
+                    "required": true,
+                    "type": "string",
+                    "param_type": "param"
+                },
+                {
+                    "name": "password",
+                    "desc": "密码(加密后的)",
+                    "required": true,
+                    "type": "string",
+                    "param_type": "param"
+                },
+                {
+                    "name": "createtime",
+                    "desc": "创建时间(时间戳)",
+                    "required": true,
+                    "type": "string",
+                    "param_type": "param"
+                },
+                {
+                    "name": "vcode",
+                    "desc": "验证码",
+                    "required": false,
+                    "type": "string",
+                    "param_type": "param"
+                }
+                ],
+                    "response": "",
+                    "exception": [
+                    {
+                        "http_code": 200,
+                        "code": "",
+                        "message": ""
+                    }
+                ]
+            }
+        },
+        "mode": "param",
+        "param_name": "method",
+        "models": {},
+        "auto_config_url": "",
+        "config_values": [
+        {
+            "name": "token",
+            "description": "站点token",
+            "default_value": "",
+            "is_secret": true
+        }
+    ],
+        "global_params": [
+        {
+            "name": "sign",
+            "param_type": "REQUEST",
+            "value_type": "sign",
+            "format": "ecos"
+        }
+    ],
+        "notify_pubish": "",
+        "notify_receive": ""
+}
