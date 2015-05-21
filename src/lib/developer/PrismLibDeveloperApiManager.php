@@ -29,7 +29,6 @@ class PrismLibDeveloperApiManager extends PrismLibBase
     {
         PrismLibCheckUtil::checkNotNull( $params['Id'], 'Id' );
         PrismLibCheckUtil::checkNotNull( $params['key'], 'key' );
-        PrismLibCheckUtil::checkNotNull( $params['value'], 'value' );
 
         return $this->callPrismApi( '/api/platform/service/config/set', $params, 'post' );
     }

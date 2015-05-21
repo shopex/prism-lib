@@ -107,7 +107,7 @@ class PrismLibInitTool
                 $createAppParams = [
                         'app_id' =>$appRes['Id']
                     ];
-                $keyRes = $this->_createAppKey($createParams, $userConn);
+                $keyRes = $this->_createAppKey($createAppParams, $userConn);
                 $result[$appName]['keys'][] = $keyRes;
             }
         }
@@ -161,9 +161,6 @@ class PrismLibInitTool
             'url' => $apiInfo['url']
             ];
         $result = $this->_importApi($importApiParams, $userConn);
-        echo "---------";
-        print_r($result);
-        echo "---------";
         //设置api的参数
         $confs = $apiInfo['conf'];
         if( count($confs) > 0 )
@@ -175,16 +172,13 @@ class PrismLibInitTool
                     'key' => $key,
                     'value' => $value,
                     ];
-                $this->_setApiConf($conf, $userConn);
+                $this->_setApiConf($setApiConfParams, $userConn);
             }
         }
         //api上线
         $apiOnlineParams = [
                 'Id' => $result['id'],
             ];
-        echo "---------";
-        print_r($apiOnlineParams);
-        echo "---------";
 
         $this->_setApiOnline($apiOnlineParams, $adminConn);
 
@@ -203,6 +197,20 @@ class PrismLibInitTool
 
         $caller = new PrismLibDeveloperAppManager($host, $key, $secret);
 
+        return $caller->create($requestParams);
+    }
+
+    private function _createAppKey($appInfo, $conn)
+    {
+        $host      = $conn['host'];
+        $key       = $conn['key'];
+        $secret    = $conn['secret'];
+
+        $requestParams = [
+            'app_id'    => $appInfo['app_id'],
+            ];
+
+        $caller = new PrismLibDeveloperKeyManager($host, $key, $secret);
         return $caller->create($requestParams);
     }
 

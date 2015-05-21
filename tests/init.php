@@ -18,8 +18,8 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 
 $params = [
     'prismHost'=>'http://localhost:8080',
-    'adminKey' => "osflpnyv",
-    'adminSecret' => "n5zq2mjflxbfj7sqzlzh",
+    'adminKey' => "vznb4obr",
+    'adminSecret' => "xf727z5qkwfr4edy6qab",
     'userEmail'    => 'test@test.com',
     'userPassword' => 'xinxin123',
     'app' => [
@@ -36,7 +36,7 @@ $params = [
     ];
 $tool = new PrismLibInitTool;
 $result = $tool->init($params);
-print_r($tool);
+print_r($result);
 
 
 
